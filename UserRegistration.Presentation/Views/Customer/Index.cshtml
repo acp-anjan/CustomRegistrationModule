@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    var firstName = ViewBag.FirstName == null ? "" : ViewBag.FirstName.ToString();
+    var lastName = ViewBag.LastName == null ? "" : ViewBag.LastName.ToString();
+}
+
+    <h4>Hi @firstName @lastName!! You are our valued customer.</h4>
+

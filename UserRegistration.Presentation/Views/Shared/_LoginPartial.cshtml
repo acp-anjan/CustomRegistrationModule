@@ -1,0 +1,20 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    @if (@User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            @Html.ActionLink(linkText: @User.Identity.Name, actionName: "Detail", controllerName: "User", null, new { @class = "nav-link" })
+        </li>
+        <li class="nav-item">
+            @Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "nav-link" })
+        </li>
+    }
+    else
+    {
+        @*<li class="nav-item">
+            @Html.ActionLink("Register", "Register", "Account", null, new { @class = "nav-link" })
+        </li>*@
+        <li class="nav-item">
+            @Html.ActionLink("Login", "Login", "Account", null, new { @class = "nav-link" })
+        </li>
+    }
+</ul>
